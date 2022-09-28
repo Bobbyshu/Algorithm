@@ -1,8 +1,4 @@
-package IMC_OA;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+package AIEMC_OUEI;
 
 public class pathExisttt {
     public static void main(String[] args) {

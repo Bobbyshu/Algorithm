@@ -1,4 +1,4 @@
-package IMC_OA;
+package AIEMC_OUEI;
 
 public class PathExist {
     public static void main(String[] args) {
