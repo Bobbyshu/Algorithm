@@ -1,4 +1,4 @@
-package zip;
+package A_OUEI.zip;
 
 public class boardPattern {
     int[] boardPattern(int[][] matrix, int[][] pattern) {
@@ -12,5 +12,7 @@ public class boardPattern {
                 }
             }
         }
+
+        return new int[]{-1, -1};
     }
 }

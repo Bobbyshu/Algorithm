@@ -1,4 +1,4 @@
-package zip;
+package A_OUEI.zip;
 
 public class te1 {
     int solution(int[] numbers) {
