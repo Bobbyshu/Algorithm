@@ -1,4 +1,4 @@
-package Tree.heap;
+package DataStructure.Tree.heap;
 
 import java.util.PriorityQueue;
 

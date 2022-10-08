@@ -1,4 +1,4 @@
-package week_contest;
+package leetcode_week_contest;
 
 public class bit_transfer {
     //get the reverse string of i-bit

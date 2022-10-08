@@ -1,14 +1,10 @@
-package week_contest;
+package leetcode_week_contest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class lc2170 {
-
-}
-
-class Solution {
     public int minimumOperations(int[] nums) {
         int n = nums.length;
         if (n == 1)
@@ -55,4 +51,7 @@ class Solution {
 
         return res;
     }
+
 }
+
+

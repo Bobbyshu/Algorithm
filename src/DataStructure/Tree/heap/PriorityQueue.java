@@ -1,4 +1,4 @@
-package Tree.heap;
+package DataStructure.Tree.heap;
 
 public class PriorityQueue {
     public static void main(String[] args) {
