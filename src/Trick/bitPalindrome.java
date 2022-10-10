@@ -1,5 +1,6 @@
 package Trick;
 
+
 public class bitPalindrome {
     /*
     判断出现奇数次的字符最多只有一个（该字符将会出现在中点位置）。全体字符有128个，可以用高低两个
