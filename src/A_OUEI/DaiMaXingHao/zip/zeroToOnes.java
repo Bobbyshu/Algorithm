@@ -1,8 +1,8 @@
-package A_OUEI.zip;
+package A_OUEI.DaiMaXingHao.zip;
 
-public class t2 {
+public class zeroToOnes {
     public static void main(String[] args) {
-        t2 te2 = new t2();
+        zeroToOnes te2 = new zeroToOnes();
         int[] arr = {1, 1, 1, 0, 0, 0};
         System.out.println(te2.zeroToOnes(arr, 2));
     }

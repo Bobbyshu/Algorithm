@@ -1,4 +1,4 @@
-package A_OUEI.zip;
+package A_OUEI.DaiMaXingHao.zip;
 
 public class boardPattern {
     int[] boardPattern(int[][] matrix, int[][] pattern) {
