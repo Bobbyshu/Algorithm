@@ -1,13 +1,13 @@
 package DataStructure.Graph;
 
-public class UnionFind2 {
+public class UnionFindEasy {
     // 连通分量个数
     private int count;
     // 存储每个节点的父节点
     private int[] parent;
 
     // n 为图中节点的个数
-    public UnionFind2(int n) {
+    public UnionFindEasy(int n) {
         this.count = n;
         parent = new int[n];
         for (int i = 0; i < n; i++) {
