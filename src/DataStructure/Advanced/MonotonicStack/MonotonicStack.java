@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.Advanced.MonotonicStack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
