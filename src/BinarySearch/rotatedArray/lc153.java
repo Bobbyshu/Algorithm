@@ -1,4 +1,4 @@
-package BinarySearch;
+package BinarySearch.rotatedArray;
 /*
 三种情况
 左 < 中 < 右：说明在未旋转的序列中，此时最小值一定在左边
@@ -7,7 +7,7 @@ package BinarySearch;
 所以中间的值和右边作比较即可查找最小值
  */
 
-public class findMinimumInRotatedSortedArray {
+public class lc153 {
     public int findMin(int[] nums) {
         int n = nums.length;
         int l = 0, r = n - 1;

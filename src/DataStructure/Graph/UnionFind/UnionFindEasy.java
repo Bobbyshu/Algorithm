@@ -1,4 +1,4 @@
-package DataStructure.Graph;
+package DataStructure.Graph.UnionFind;
 
 public class UnionFindEasy {
     // 连通分量个数

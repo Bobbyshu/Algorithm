@@ -1,4 +1,4 @@
-package DataStructure.Graph;
+package DataStructure.Graph.UnionFind;
 
 import java.util.Arrays;
 

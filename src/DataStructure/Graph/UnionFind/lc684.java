@@ -1,4 +1,4 @@
-package DataStructure.Graph;
+package DataStructure.Graph.UnionFind;
 
 public class lc684 {
     public static void main(String[] args) {
