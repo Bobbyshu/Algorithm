@@ -1,4 +1,4 @@
-package BinarySearch.rotatedArray;
+package Algorithm.BinarySearch.rotatedArray;
 /*
 三种情况
 左 < 中 < 右：说明在未旋转的序列中，此时最小值一定在左边

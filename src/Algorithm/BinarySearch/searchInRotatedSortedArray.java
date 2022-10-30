@@ -1,4 +1,4 @@
-package BinarySearch;
+package Algorithm.BinarySearch;
 
 public class searchInRotatedSortedArray {
 

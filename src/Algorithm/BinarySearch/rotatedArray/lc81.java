@@ -1,4 +1,4 @@
-package BinarySearch.rotatedArray;
+package Algorithm.BinarySearch.rotatedArray;
 //相比33多了个去重的操作，其他都是一样的
 public class lc81 {
     public boolean search(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package BinarySearch.rotatedArray;
+package Algorithm.BinarySearch.rotatedArray;
 //在153的基础上加上去重，把right向左边找即可
 /*
 们采用 right = right - 1 解决此问题，证明：

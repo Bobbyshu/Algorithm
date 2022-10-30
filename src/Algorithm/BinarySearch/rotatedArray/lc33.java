@@ -1,4 +1,4 @@
-package BinarySearch.rotatedArray;
+package Algorithm.BinarySearch.rotatedArray;
 //通过判断mid左边是单调递增还是右边是单调递增来确定寻找的方向
 
 public class lc33 {
