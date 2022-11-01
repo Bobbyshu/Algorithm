@@ -9,5 +9,6 @@ public class javaTypeTransfer {
         char c = '1';
         int b = Integer.parseInt(one);
         int d = c - '0';
+        System.out.println((char) (c + 1));
     }
 }
