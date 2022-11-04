@@ -1,4 +1,4 @@
-package formwork;
+package Formwork;
 
 import java.util.HashMap;
 import java.util.Map;
