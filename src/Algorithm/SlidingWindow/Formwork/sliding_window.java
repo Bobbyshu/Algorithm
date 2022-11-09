@@ -1,4 +1,4 @@
-package Formwork;
+package Algorithm.SlidingWindow.Formwork;
 
 import java.util.HashMap;
 import java.util.Map;
