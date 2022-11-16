@@ -1,47 +1,31 @@
 package Trick;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class test {
-    public int longestPalindrome(String[] words) {
-        Map<String, Integer> map = new HashMap<>();
-        for (String s : words) {
-            map.put(s, map.getOrDefault(s, 0) + 1);
-        }
+    public static void main(String[] args) {
+        int[][] box = {{5,10},{2,5},{4,7},{3,9}};
+        int size = 10;
+        maximumUnits(box, size);
+    }
 
+    public static int maximumUnits(int[][] boxTypes, int truckSize) {
+        Arrays.sort(boxTypes, (int[] o1, int[] o2) -> o2[1] - o1[1]);
         int res = 0;
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            int times = entry.getValue();
-            String s = entry.getKey();
-            if (isValid(s)) {
-                res += map.get(s);
+
+        for (int[] box : boxTypes) {
+            // if (truckSize <= 0)
+            //     break;
+            if (truckSize >= box[0]) {
+                res += box[0] * box[1];
+            } else {
+                res += truckSize * box[1];
             }
-            if (map.containsKey(reverse(s))) {
-                res += Math.min(map.get(s), map.get(reverse(s)));
-                map.remove(reverse(s));
-            }
+            truckSize -= box[0];
         }
+
         return res;
-    }
-
-    String reverse(String s) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = s.length() - 1; i >= 0; i--) {
-            sb.append(s.charAt(i));
-        }
-        return sb.toString();
-    }
-
-    boolean isValid(String s) {
-        int i = 0, j = s.length() - 1;
-        while (i < j) {
-            if (s.charAt(i) != s.charAt(j)) {
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
     }
 }
