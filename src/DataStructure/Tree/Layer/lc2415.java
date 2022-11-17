@@ -1,4 +1,4 @@
-package DataStructure.Tree;
+package DataStructure.Tree.Layer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ public class lc2415 {
         while (!list.isEmpty()) {
             if (depth % 2 == 1) {
                 List<Integer> temp = new ArrayList<>();
-                for (int i = 0; i < list.size(); i++) {
-                    temp.add(list.get(i).val);
+                for (TreeNode treeNode : list) {
+                    temp.add(treeNode.val);
                 }
 
                 for (int i = 0; i < list.size(); i++) {
@@ -22,8 +22,7 @@ public class lc2415 {
 
             List<TreeNode> nextLayer = new ArrayList<>();
 
-            for (int i = 0; i < list.size(); i++) {
-                TreeNode node = list.get(i);
+            for (TreeNode node : list) {
                 if (node.left != null) {
                     nextLayer.add(node.left);
                 }
@@ -39,4 +38,6 @@ public class lc2415 {
 
         return root;
     }
+
+
 }

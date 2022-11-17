@@ -1,4 +1,4 @@
-package DataStructure.Tree;
+package DataStructure.Tree.Traverse;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -23,24 +23,5 @@ public class InOrderTraverse {
         }
 
         return res;
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

@@ -6,6 +6,7 @@ public class BinarySearch {
     }
 
     //寻找左边界的下标
+    //当 val 不存在时，得到的索引恰好是比 val 大的最小元素索引。
     int left_bound(int[] nums, int target) {
         if (nums.length == 0) return -1;
         int left = 0, right = nums.length;
