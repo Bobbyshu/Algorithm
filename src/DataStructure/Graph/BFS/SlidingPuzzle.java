@@ -1,12 +1,14 @@
 package DataStructure.Graph.BFS;
+//lc773
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.Set;
 
-public class lc773 {
+public class SlidingPuzzle {
     int[][] neigh = {{1, 3}, {0, 2, 4}, {1, 5}, {0, 4}, {1, 3, 5}, {2, 4}};
+
     public int slidingPuzzle(int[][] board) {
         int m = 2, n = 3;
         StringBuilder sb = new StringBuilder();

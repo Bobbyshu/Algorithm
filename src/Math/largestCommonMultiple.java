@@ -1,4 +1,4 @@
-package Trick;
+package Math;
 
 public class largestCommonMultiple {
     public int gcd(int b, int a) {

@@ -1,4 +1,4 @@
-package Trick;
+package Math;
 
 public class gcd {
     int gcd(int a, int b) {
