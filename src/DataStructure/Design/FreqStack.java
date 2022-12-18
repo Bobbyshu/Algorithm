@@ -11,7 +11,9 @@ public class FreqStack {
     private int maxFreq;
 
     public FreqStack() {
+        // each val to frequency
         freq = new HashMap<>();
+        // each frequency to val(store in stack)
         group = new HashMap<>();
         maxFreq = 0;
     }

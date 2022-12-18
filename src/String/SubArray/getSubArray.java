@@ -1,4 +1,4 @@
-package Trick;
+package String.SubArray;
 
 import java.util.ArrayList;
 import java.util.List;

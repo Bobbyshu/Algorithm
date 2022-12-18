@@ -1,5 +1,10 @@
 package Trick;
 
+import DataStructure.Tree.SegmentTree.SegmentTree;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class javaTypeTransfer {
     public static void main(String[] args) {
         int a = 1;
@@ -9,6 +14,8 @@ public class javaTypeTransfer {
         char c = '1';
         int b = Integer.parseInt(one);
         int d = c - '0';
+        System.out.println((int)c);
+        System.out.println(d);
         System.out.println((char) (c + 1));
     }
 }

@@ -1,4 +1,4 @@
-package DataStructure.Graph.BFS;
+package Algorithm.BFS;
 //lc773
 
 import java.util.ArrayDeque;
