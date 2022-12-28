@@ -1,4 +1,4 @@
-package leetcode_week_contest;
+package leetcode;
 
 public class MaximizeDistanceClosestPerson {
     public int maxDistToClosest(int[] seats) {

@@ -1,4 +1,4 @@
-package leetcode_week_contest.DynamicProgram;
+package leetcode.DynamicProgram;
 /*
 动态规划，状态是增加的，只能由左边或者上边过来，
 每次过来其实是枚举余数，(grid[i][j]+p)%k + grid[i][j -1][p]；

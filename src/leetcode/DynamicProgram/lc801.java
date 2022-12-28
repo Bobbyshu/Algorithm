@@ -1,4 +1,4 @@
-package leetcode_week_contest.DynamicProgram;
+package leetcode.DynamicProgram;
 /*
 我们有两个长度相等且不为空的整型数组 nums1 和 nums2 。在一次操作中，我们可以交换 nums1[i] 和 nums2[i]的元素。
 

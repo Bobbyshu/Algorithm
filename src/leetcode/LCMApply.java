@@ -1,4 +1,4 @@
-package leetcode_week_contest;
+package leetcode;
 /*
 lc 2470
  */

@@ -1,4 +1,4 @@
-package leetcode_week_contest.greedy;
+package leetcode.greedy;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,4 +1,4 @@
-package leetcode_week_contest.brainteaser;
+package leetcode.brainteaser;
 /*
 We have a wooden plank of the length n units. Some ants are walking on the plank,
 each ant moves with a speed of 1 unit per second.
