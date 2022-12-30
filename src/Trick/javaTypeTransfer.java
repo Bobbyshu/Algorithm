@@ -13,6 +13,7 @@ public class javaTypeTransfer {
         String one = "1";
         char c = '1';
         int b = Integer.parseInt(one);
+        System.out.println(b);
         int d = c - '0';
         System.out.println((int)c);
         System.out.println(d);

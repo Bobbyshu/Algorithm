@@ -1,10 +1,10 @@
-package Algorithm.Backtrace;
+package Algorithm.Backtrace.combination;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Backtrace {
+class Backtrace {
     List<List<Integer>> res;
     LinkedList<Integer> path;
     public List<List<Integer>> combine(int n, int k) {

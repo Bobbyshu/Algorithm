@@ -1,4 +1,4 @@
-package GuCheng.A_ScanLine;
+package GuCheng.FundmentalAlgo.A_ScanLine;
 
 public class DataStreamAsDisjointIntervals {
 }
