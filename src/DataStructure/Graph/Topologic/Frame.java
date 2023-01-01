@@ -8,6 +8,7 @@ import java.util.List;
 public class Frame {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         int[] inDegree = new int[numCourses];
+        List[] list = new List[numCourses];
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < numCourses; ++i) {
             adj.add(new ArrayList<>());

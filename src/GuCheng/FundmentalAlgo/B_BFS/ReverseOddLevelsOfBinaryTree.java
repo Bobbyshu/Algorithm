@@ -1,9 +1,9 @@
-package DataStructure.Tree.Layer;
+package GuCheng.FundmentalAlgo.B_BFS;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class lc2415 {
+public class ReverseOddLevelsOfBinaryTree {
     public TreeNode reverseOddLevels(TreeNode root) {
         List<TreeNode> list = new ArrayList<>();
         list.add(root);
@@ -11,8 +11,8 @@ public class lc2415 {
         while (!list.isEmpty()) {
             if (depth % 2 == 1) {
                 List<Integer> temp = new ArrayList<>();
-                for (TreeNode treeNode : list) {
-                    temp.add(treeNode.val);
+                for (int i = 0; i < list.size(); i++) {
+                    temp.add(list.get(i).val);
                 }
 
                 for (int i = 0; i < list.size(); i++) {
@@ -22,7 +22,8 @@ public class lc2415 {
 
             List<TreeNode> nextLayer = new ArrayList<>();
 
-            for (TreeNode node : list) {
+            for (int i = 0; i < list.size(); i++) {
+                TreeNode node = list.get(i);
                 if (node.left != null) {
                     nextLayer.add(node.left);
                 }
