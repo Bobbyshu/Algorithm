@@ -1,4 +1,4 @@
-package Algorithm.Backtrace;
+package Algorithm.Backtrace.partition;
 
 import java.util.ArrayList;
 import java.util.List;

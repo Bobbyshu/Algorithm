@@ -1,4 +1,4 @@
-package Algorithm.Backtrace;
+package Algorithm.Backtrace.permutation;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
