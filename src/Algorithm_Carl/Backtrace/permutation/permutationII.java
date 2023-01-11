@@ -1,25 +1,24 @@
 package Algorithm_Carl.Backtrace.permutation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class permutation {
+public class permutationII {
     List<List<Integer>> res;
     LinkedList<Integer> path;
     boolean[] used;
-
-    public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
         res = new ArrayList<>();
         path = new LinkedList<>();
         used = new boolean[nums.length];
+        Arrays.sort(nums);
 
         dfs(nums);
         return res;
     }
 
-    //因为排列问题，每次都要从头开始搜索，例如元素1在[1,2]中已经使用过了，但是在[2,1]中还要再使用一次1。
-    //而used数组，其实就是记录此时path里都有哪些元素使用了，一个排列里一个元素只能使用一次。
     void dfs(int[] nums) {
         if (path.size() == nums.length) {
             res.add(new LinkedList<>(path));
@@ -27,8 +26,13 @@ public class permutation {
         }
 
         for (int i = 0; i < nums.length; ++i) {
-            if (used[i])
+            if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
                 continue;
+            }
+
+            if (used[i]) {
+                continue;
+            }
             used[i] = true;
             path.add(nums[i]);
             dfs(nums);

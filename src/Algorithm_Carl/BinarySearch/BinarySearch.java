@@ -2,7 +2,20 @@ package Algorithm_Carl.BinarySearch;
 
 public class BinarySearch {
     public static void main(String[] args) {
-
+        /*
+        int L = 1, R = 100000, ans = 100001;
+        while(R - L >= 5) {
+            int M = (L + R) / 2;
+            if(check(M)) R = M;
+            else L = M;
+        }
+        for(int i = L; i <= R; i++) {
+            if(check(i)) {
+                ans = i;
+                break;
+            }
+        }
+         */
     }
 
     //寻找左边界的下标

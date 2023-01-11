@@ -15,7 +15,7 @@ public class subsets {
     }
 
     public void dfs(int[] nums, int idx) {
-        res.add(new ArrayList<>(path));
+        res.add(new LinkedList<>(path));
         if (idx >= nums.length) {
             return;
         }
