@@ -1,20 +1,15 @@
-package GuCheng.FundmentalAlgo.C_DFS;
+package GuCheng.Fundmental.Algo.C_DFS;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
-public class SubsetsWithDup {
+//找全部叶子结点
+public class Subsets {
     List<List<Integer>> res;
     LinkedList<Integer> path;
-    boolean[] used;
-
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public List<List<Integer>> subsets(int[] nums) {
         res = new ArrayList<>();
         path = new LinkedList<>();
-        Arrays.sort(nums);
-        used = new boolean[nums.length];
         dfs(nums, 0);
         return res;
     }
@@ -26,13 +21,8 @@ public class SubsetsWithDup {
         }
 
         for (int i = idx; i < nums.length; ++i) {
-            if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
-                continue;
-            }
             path.add(nums[i]);
-            used[i] = true;
             dfs(nums, i + 1);
-            used[i] = false;
             path.removeLast();
         }
     }

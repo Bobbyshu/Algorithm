@@ -1,4 +1,4 @@
-package GuCheng.FundmentalAlgo.B_BFS;
+package GuCheng.Fundmental.Algo.B_BFS;
 
 import java.util.*;
 

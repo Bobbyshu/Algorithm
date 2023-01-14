@@ -1,4 +1,4 @@
-package GuCheng.FundmentalAlgo.A_ScanLine;
+package GuCheng.Fundmental.Algo.A_ScanLine;
 /*
 Given an array of meeting room intervals consisting of start and end times
 find the minimum number of conference rooms required

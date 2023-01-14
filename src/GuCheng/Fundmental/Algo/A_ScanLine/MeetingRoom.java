@@ -1,4 +1,4 @@
-package GuCheng.FundmentalAlgo.A_ScanLine;
+package GuCheng.Fundmental.Algo.A_ScanLine;
 
 import java.util.Arrays;
 
