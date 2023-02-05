@@ -52,7 +52,7 @@ public class BinarySearch {
                 right = mid;
             }
         }
-        return left;
+        return left - 1;
     }
 }
 
