@@ -1,4 +1,4 @@
-package Algorithm_Carl.BinarySearch;
+package Trick;
 
 public class yxzFrameWork {
   int left_bound(int[] nums, int target) {

@@ -4,28 +4,47 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import static Trick.test1.testi;
+
 public class test {
     public static void main(String[] args) {
-        int[][] box = {{5,10},{2,5},{4,7},{3,9}};
-        int size = 10;
-        maximumUnits(box, size);
+        AuthenticationManager am = new AuthenticationManager(5);
+        System.out.println(testi);
+    }
+}
+
+class test1 {
+    public static int testi = 1;
+}
+class AuthenticationManager {
+    Map<String, Integer> map;
+    int timeToLive;
+    public AuthenticationManager(int timeToLive) {
+        map = new HashMap<>();
+        this.timeToLive = timeToLive;
     }
 
-    public static int maximumUnits(int[][] boxTypes, int truckSize) {
-        Arrays.sort(boxTypes, (int[] o1, int[] o2) -> o2[1] - o1[1]);
-        int res = 0;
+    public void generate(String tokenId, int currentTime) {
+        map.put(tokenId, currentTime);
+    }
 
-        for (int[] box : boxTypes) {
-            // if (truckSize <= 0)
-            //     break;
-            if (truckSize >= box[0]) {
-                res += box[0] * box[1];
-            } else {
-                res += truckSize * box[1];
+    public void renew(String tokenId, int currentTime) {
+        if (map.containsKey(tokenId)) {
+            if (map.get(tokenId) + timeToLive > currentTime) {
+                map.put(tokenId, currentTime);
             }
-            truckSize -= box[0];
         }
+    }
 
-        return res;
+    public int countUnexpiredTokens(int currentTime) {
+        int cnt = 0;
+        for (String s : map.keySet()) {
+            // System.out.println(s);
+            // System.out.println(map.get(s));
+            if (map.get(s) + timeToLive > currentTime) {
+                ++cnt;
+            }
+        }
+        return cnt;
     }
 }

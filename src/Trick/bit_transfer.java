@@ -8,6 +8,6 @@ public class bit_transfer {
             sb.append(n % i);
             n /= i;
         }
-        return sb.toString();
+        return sb.reverse().toString();
     }
 }
