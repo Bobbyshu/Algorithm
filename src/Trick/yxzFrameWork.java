@@ -1,6 +1,7 @@
 package Trick;
 
 public class yxzFrameWork {
+  // 取到等于target最左边的一个数，或者大于他的第一个数字
   int left_bound(int[] nums, int target) {
     int l = 0, r = nums.length - 1;
     // find left_bound
@@ -16,6 +17,7 @@ public class yxzFrameWork {
     return nums[r] == target ? r : -1;
   }
 
+  // 取到等于target最右边的一个数，或者小于他的第一个数字
   int right_bound(int[] nums, int target) {
     int l = 0, r = nums.length - 1;
     // find right_bound

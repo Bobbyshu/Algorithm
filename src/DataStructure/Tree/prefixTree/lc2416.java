@@ -6,6 +6,12 @@ package DataStructure.Tree.prefixTree;
 如 "abc"，只需要路径 abc 的节点累加即可，2 + 2 + 1 = 5
  */
 public class lc2416 {
+    public static void main(String[] args) {
+        String[] w = {"abc","ab","bc","b"};
+        lc2416 lc = new lc2416();
+        lc.sumPrefixScores(w);
+
+    }
     public int[] sumPrefixScores(String[] words) {
         for (String word : words) {
             insert(word);

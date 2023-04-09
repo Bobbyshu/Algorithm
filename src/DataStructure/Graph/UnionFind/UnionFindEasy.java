@@ -43,7 +43,7 @@ public class UnionFindEasy {
     }
 
     // 返回图中的连通分量个数
-    public int count() {
+    public int getCount() {
         return count;
     }
 }
