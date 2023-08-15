@@ -9,7 +9,6 @@ public class puzzle {
         funcSubstring(s);
     }
     public static String funcSubstring(String inputStr) {
-
         int n = inputStr.length();
         List<String> list = new ArrayList<>();
         boolean[][] dp = new boolean[n][n];
