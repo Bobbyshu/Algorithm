@@ -14,11 +14,13 @@ public class MinimumAbsoluteDifference {
             treeSet.add(pre);
 
             int k = nums.get(i);
+            // 返回Set中大于/等于e的最小元素
             Integer right = treeSet.ceiling(k);
             if (null != right) {
                 res = Math.min(res, Math.abs(right - k));
             }
 
+            // 返回Set中小于/等于e的最大元素
             Integer left = treeSet.floor(k);
             if (null != left) {
                 res = Math.min(res, Math.abs(left - k));
