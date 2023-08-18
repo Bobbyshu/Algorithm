@@ -1,4 +1,4 @@
-package BISHI.Cisco.ngAndIntern;
+package BISHI.Cisco;
 
 public class digitalAddEqualFindNumber {
     public static void main(String[] args) {
