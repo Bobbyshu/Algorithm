@@ -1,4 +1,4 @@
-package BISHI.Cisco.ngAndIntern;
+package BISHI.Cisco;
 
 public class jarsOfChocolates {
     public int rob(int[] nums) {

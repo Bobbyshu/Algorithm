@@ -10,21 +10,29 @@ public class t3 {
     int l = 0, r = (int) 1e9;
     while (l <= r) {
       int mid = l + (r - l) / 2;
-      int i = 0, cnt = 0;
-      while (i < n) {
-        if (i + 1 < n && nums[i + 1] - nums[i] <= mid) {
-          cnt++;
-          i += 2;
-        } else {
-          i++;
-        }
-      }
-      if (cnt >= p) {
-        r = mid - 1;
+      if (check(nums, mid, p)) {
+        r = mid;
       } else {
         l = mid + 1;
       }
     }
     return l;
+  }
+
+  boolean check(int[] nums, int target, int p) {
+    int i = 0, n = nums.length;
+    while (i < n) {
+      if (i + 1 < n && nums[i + 1] - nums[i] <= target) {
+        --p;
+        i += 2;
+      } else {
+        ++i;
+      }
+      if (p < 0) {
+        return true;
+      }
+    }
+
+    return p <= 0;
   }
 }

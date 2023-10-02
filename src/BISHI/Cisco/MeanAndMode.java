@@ -1,4 +1,4 @@
-package BISHI.Cisco.ngAndIntern;
+package BISHI.Cisco;
 
 public class MeanAndMode {
     public double[] modeAndMean(int[] nums) {

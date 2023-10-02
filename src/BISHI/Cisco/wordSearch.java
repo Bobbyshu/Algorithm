@@ -1,4 +1,4 @@
-package BISHI.Cisco.ngAndIntern;
+package BISHI.Cisco;
 
 import java.util.*;
 
