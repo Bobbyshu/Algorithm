@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        var memo = new ArrayList<>();
+//        var memo = new ArrayList<>();
     }
 }
