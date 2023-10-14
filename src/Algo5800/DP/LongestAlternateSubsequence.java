@@ -18,7 +18,6 @@ public class LongestAlternateSubsequence {
     int[] inc_len = new int[n];
     int[] dec_len = new int[n];
 
-    // 初始化为1
     Arrays.fill(inc_len, 1);
     Arrays.fill(dec_len, 1);
 
