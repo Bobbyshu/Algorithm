@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MaximumProductOfWordLengths {
   public static void main(String[] args) {
-    int n1 = 1 << 5;
+    int n1 = 1 << 4;
     System.out.println(n1);
     int n2 = 1 << 4;
     System.out.println(n2);
