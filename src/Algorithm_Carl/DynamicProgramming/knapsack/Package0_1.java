@@ -1,6 +1,6 @@
 package Algorithm_Carl.DynamicProgramming.knapsack;
 
-public class Package {
+public class Package0_1 {
     public static void main(String[] args) {
         int[] weight = {1, 3, 4};
         int[] value = {15, 20, 30};
@@ -19,6 +19,7 @@ public class Package {
         //遍历顺序：先遍历物品，再遍历背包容量
         for (int i = 1; i <= wlen; i++){
             for (int j = 1; j <= bagsize; j++){
+                // 二维的时候要注意添加这个if else，一维不需要是因为1维会自动继承滚动下来的数值
                 if (j < weight[i - 1]){
                     dp[i][j] = dp[i - 1][j];
                 }else{
