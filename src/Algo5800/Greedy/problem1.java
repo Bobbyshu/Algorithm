@@ -2,6 +2,7 @@ package Algo5800.Greedy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class problem1 {
@@ -21,8 +22,9 @@ public class problem1 {
         {12, 16},
         {20, 30}
     };
-    smallestCover(arr);
-    solve2(arr);
+    int[][] arr2 = {{1, 4}, {3, 5}, {2, 6}, {7, 9}, {8, 10}};
+    smallestCover(arr2);
+//    solve2(arr2);
   }
 
   public static void smallestCover(int[][] x) {
@@ -41,14 +43,15 @@ public class problem1 {
         if (last[1] < cur[1]) {
           last = cur;
         }
-        continue;
-      }
 
-      // update new interval and last longest f_i interval
-      res.add(last);
-      last = cur;
-      res.add(last);
+      } else {
+        // update new interval and last longest f_i interval
+        res.add(last);
+        res.add(cur);
+        last = cur;
+      }
     }
+    res.add(last);
 
     for (int[] s : res) {
       System.out.println(Arrays.toString(s));
@@ -56,8 +59,11 @@ public class problem1 {
   }
 
   public static void solve2(int[][] x) {
+    Arrays.sort(x, (o1, o2) -> o1[0] == o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]);
+    System.out.println(Arrays.deepToString(x));
+
     List<int[]> result = new ArrayList<>();
-    int right = x[0][0];
+    int right = x[0][1];
     int maxRight = x[0][1];
     int[] maxInterval = x[0];
 
