@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 public class problem3 {
   public static void main(String[] args) {
-    int[][] arr2 = {{1, 4}, {3, 5}, {2, 6}, {7, 9}, {8, 10}};
+    int[][] arr2 = {{1, 4}, {3, 5}, {2, 6}, {7, 9}, {8, 11}};
     System.out.println(coloringIntervals(arr2));
   }
   public static int coloringIntervals(int[][] x) {
