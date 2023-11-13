@@ -17,25 +17,13 @@ public class t3 {
   }
 
   public static int lengthOfLongestSubsequence(List<Integer> nums, int target) {
-    Collections.sort(nums);
-
-    List<Integer> arr = new ArrayList<>();
-    for (int n : nums) {
-      if (n <= target) {
-        arr.add(n);
-      } else {
-        break;
-      }
-    }
-
-    int n = arr.size();
     int[] dp = new int[target + 1];
     Arrays.fill(dp, Integer.MIN_VALUE);
 
     dp[0] = 0;
-    for (int i = 0; i < n; ++i) {
-      for (int j = target; j >= arr.get(i); --j) {
-        dp[j] = Math.max(dp[j], dp[j - arr.get(i)] + 1);
+    for (int cur : nums) {
+      for (int j = target; j >= cur; --j) {
+        dp[j] = Math.max(dp[j], dp[j - cur] + 1);
       }
     }
 
