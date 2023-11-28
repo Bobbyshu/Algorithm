@@ -1,9 +1,6 @@
 package Algo5800.Graph_fundamental;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 // Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
 // Output: [0,2,1,3]
@@ -13,8 +10,9 @@ import java.util.List;
 // So one correct course order is [0,1,2,3]. Another correct ordering is [0,2,1,3].
 public class Q3 {
   public static void main(String[] args) {
-    int[][] pre = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
+    int[][] pre = {{1, 0}, {2, 1}, {3, 0}, {3,1}, {3, 2}};
     bfs(4, pre);
+    System.out.println(Arrays.toString(bfs(4, pre)));
   }
 
   public static int[] bfs(int numCourses, int[][] prerequisites) {
