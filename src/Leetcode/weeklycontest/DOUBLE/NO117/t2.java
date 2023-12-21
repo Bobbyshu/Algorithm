@@ -17,7 +17,7 @@ public class t2 {
       } else if (remain <= limit) { // B -> left + 1;
         res += (remain + 1);
       } else {    // limit < remain <= 2 * limit --> B -> [remain - limit, limit]
-        res += (2 * limit - remain + 1);
+        res += (2L * limit - remain + 1);
       }
     }
 
