@@ -1,6 +1,8 @@
 package Algo5800.DP;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MakeMountainArray {
   // [2, 1, 1, 5, 6, 2, 3, 1]
@@ -49,6 +51,48 @@ public class MakeMountainArray {
   }
 
   public int binarySearch(int[] nums) {
+    int n = nums.length;
+    int[] suf = new int[n];
+    List<Integer> g = new ArrayList<>();
+    for (int i = n - 1; i > 0; i--) {
+      int x = nums[i];
+      int j = lowerBound(g, x);
+      if (j == g.size()) {
+        g.add(x);
+      } else {
+        g.set(j, x);
+      }
+      suf[i] = j + 1;
+    }
 
+    int mx = 0;
+    g.clear();
+    for (int i = 0; i < n - 1; i++) {
+      int x = nums[i];
+      int j = lowerBound(g, x);
+      if (j == g.size()) {
+        g.add(x);
+      } else {
+        g.set(j, x);
+      }
+      int pre = j + 1;
+      if (pre >= 2 && suf[i] >= 2) {
+        mx = Math.max(mx, pre + suf[i] - 1);
+      }
+    }
+    return n - mx;
+  }
+
+  private int lowerBound(List<Integer> g, int target) {
+    int left = 0, right = g.size();
+    while (left < right) {
+      int mid = (left + right) >>> 1;
+      if (g.get(mid) < target) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+    return right;
   }
 }
