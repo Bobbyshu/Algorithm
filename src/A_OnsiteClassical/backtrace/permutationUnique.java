@@ -1,5 +1,9 @@
 package A_OnsiteClassical.backtrace;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class permutationUnique {
   List<List<Integer>> res;
   List<Integer> path;
@@ -22,7 +26,7 @@ public class permutationUnique {
     }
 
     for (int i = 0; i < nums.length; ++i) {
-      if (i > 0 && nums[i] == nums[i - 1] && used[i - 1] == false) {
+      if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
         continue;
       }
       if (used[i]) {
