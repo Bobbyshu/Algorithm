@@ -1,0 +1,78 @@
+# Show what branch we are on
+# Typically this is origin/main
+git status
+
+# Show our previous commits and messages (Some of these which I made)
+# Press 'q' to exit. Use arrows to move up and down through history.
+git log --oneline
+
+# Shows all the branches and which you are working on.
+# You may notice we do not have a 'refactor' branch yet.
+git branch -a
+
+# Let's create a separate branch to work on.
+git branch refactor
+
+# Show branches we have to confirm it was made
+git branch -a
+
+# Switch to a different development branch
+# In this case, our 'refactor'
+git checkout refactor
+
+# View which branch we are on again to confirm
+# (or use 'git status')
+git branch -a
+
+# Do a git status to see the changes
+git status
+
+# Let's now make a change to our file in our source(src) directory
+# (Use vim or whichever text editor to update the code.)
+# That is, go ahead and refactor ./warmup/src/rectangle.d from within your 'refactor' branch.
+
+# After you have refactored rectangle.d
+# Check which files have been modified again with
+git status
+
+# Add the change to the branch
+# git add rectangle.d or 'git add .'
+git add . 
+
+# Add a commit message
+git commit -m "rectangle.d refactored" 
+
+# Now we are going to push your changes 'upstream' in 
+# a separate branch. The '-u' argument sets us up
+# to push changes upstream, or otherwise to 
+# be tracked by github.com. This means our branch
+# that has only been created on our 'local' machine,
+# will now be accessible on a remote machine.
+git push -u origin refactor
+
+# ---------------------------------------
+# Pause now for a moment, and go to github.com in your repository.
+# Towards the left-corner of your repository, click 'main' and
+# see that your 'refactor' branch is an option in the drop-down.
+# If you navigate to your lab/src  directory where retangle.d 
+# resides, you should note that the main and refactor branches
+# are different.
+
+# At this point, assume another 'code review' takes place, and your
+# team accepts your changes.
+# Let's now merge your 'in-development' 'refactor' branch with the
+# 'main' branch.
+# ---------------------------------------
+
+# Move back to the main branch where we want to merge changes
+git checkout main
+
+# merge in new code changes from our feature branch into
+# our main branch
+# You should get a conflict, so we will help it decide.
+# which version to keep. You can simply save in the new version.
+git merge refactor
+
+# Then push your changes into the main branch, such that I should see src/rectangle.d
+# with the changes that have been made in the 'refactor' branch.
+git push
