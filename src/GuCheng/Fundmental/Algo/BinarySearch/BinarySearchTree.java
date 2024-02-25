@@ -30,7 +30,7 @@ public class BinarySearchTree {
       // make sure can find
       int idx = left_bound(list, q);
       int num = list.get(idx);
-      int pre = -1, next = num;
+      int pre = -1;
       // 找到
       if (num == q) {
         pre = num;
@@ -39,7 +39,7 @@ public class BinarySearchTree {
       }
 
       cur.add(pre);
-      cur.add(next);
+      cur.add(num);
       res.add(cur);
     }
 
