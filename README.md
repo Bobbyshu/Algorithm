@@ -1,2 +1,2 @@
 # Algorithm
-Including fundamental Algorithm and Leetcode questions
+Including fundamental algorithm and leetcode questions
