@@ -16,8 +16,11 @@ public class t3 {
 
       // remove cur number's frequency
       // --m[cnt[x]] == 0
-      if (cnt.containsKey(x) && m.containsKey(cnt.get(x)) && m.merge(cnt.get(x), -1, Integer::sum) == 0) {
-        m.remove(cnt.get(x));
+      if (cnt.containsKey(x) && m.containsKey(cnt.get(x))) {
+        int adjust = m.merge(cnt.get(x), -1, Integer::sum);
+        if (adjust == 0) {
+          m.remove(cnt.get(x));
+        }
       }
 
       // cnt[x] += freq[i]
