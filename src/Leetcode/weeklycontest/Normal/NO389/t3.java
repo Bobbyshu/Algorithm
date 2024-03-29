@@ -1,5 +1,6 @@
 package Leetcode.weeklycontest.Normal.NO389;
 
+import java.util.Arrays;
 import java.util.TreeMap;
 
 public class t3 {
@@ -9,38 +10,28 @@ public class t3 {
             cnt[c - 'a']++;
         }
 
-        // <freq , freq time>
-        TreeMap<Integer, Integer> map = new TreeMap<>();
+//        Arrays.sort(cnt);
 
-        for (int c : cnt) {
-            if (c != 0) {
-                map.merge(c, 1, Integer::sum);
+        // there must be a character can be exempted from deleting
+        // because if we delete each character 1
+        // it equals to we add each character 1
+        // both will not influence the gap between the most and least freq
+        // So, we can enumerate the available freq
+
+        // enumerate the available minimum freq
+        int save = 0;
+        for (int i = 0; i < 26; ++i) {
+            int sum = 0;
+            for (int j = 0; j < 26; ++j) {
+                if (cnt[j] < cnt[i]) {
+                    continue;
+                }
+
+                sum += Math.min(cnt[j], cnt[i] + k);
             }
+            save = Math.max(save, sum);
         }
 
-        int res = 0;
-
-        while (true) {
-            if (map.size() == 1) {
-                return res;
-            }
-
-            int first = map.firstKey(), last = map.lastKey();
-            if (last - first <= k) {
-                return res;
-            }
-
-            // require process
-
-            if (map.get(first) > map.get(last)) {
-                res += map.get(last);
-                map.remove(last);
-            } else if (map.get(first) >= map.get(last)) {
-                res += map.get(first);
-                map.remove(first);
-            }
-        }
-
-        return res;
+        return word.length() - save;
     }
 }
