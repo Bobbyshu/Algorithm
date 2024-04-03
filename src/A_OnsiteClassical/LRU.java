@@ -14,9 +14,9 @@ public class LRU {
         lru.get(2);
     }
     // each Node has its Integer index
-    private Map<Integer, Node> map;
-    private DoubleLinkedList cache;
-    private int capacity;
+    private final Map<Integer, Node> map;
+    private final DoubleLinkedList cache;
+    private final int capacity;
 
     public LRU(int capacity) {
         this.map = new HashMap<>();
@@ -58,8 +58,8 @@ public class LRU {
 }
 
 class DoubleLinkedList {
-    private Node head;
-    private Node tail;
+    private final Node head;
+    private final Node tail;
     private int size;
 
     public DoubleLinkedList() {
