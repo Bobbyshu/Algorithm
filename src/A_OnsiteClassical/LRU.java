@@ -16,12 +16,12 @@ public class LRU {
     // each Node has its Integer index
     private Map<Integer, Node> map;
     private DoubleLinkedList cache;
-    private int cap;
+    private int capacity;
 
     public LRU(int capacity) {
         this.map = new HashMap<>();
         this.cache = new DoubleLinkedList();
-        this.cap = capacity;
+        this.capacity = capacity;
     }
 
     public int get(int key) {
@@ -29,63 +29,37 @@ public class LRU {
             return -1;
         }
 
-        priority(key);
-        Node cur = map.get(key);
-        return cur.val;
+        Node target = map.get(key);
+        cache.remove(target);
+        cache.addFirst(target);
+        return target.val;
     }
 
     public void put(int key, int value) {
         if (map.containsKey(key)) {
-            deleteKey(key);
-            addRecently(key, value);
+            Node target = map.get(key);
+            cache.remove(target);
+
+            target.val = value;
+            cache.addFirst(target);
+
             return;
         }
 
-        // filled
-        if (cache.getSize() == cap) {
-            removeLeastRecently();
+        if (capacity == cache.getSize()) {
+            Node removeOne = cache.removeLast();
+            map.remove(removeOne.key);
         }
 
-        addRecently(key, value);
-    }
-
-    private void priority(int key) {
-        Node x = map.get(key);
-        cache.remove(x);
-        cache.addLast(x);
-    }
-
-    private void addRecently(int key, int val) {
-        Node insert = new Node(key, val);
-        cache.addLast(insert);
-        map.put(key, insert);
-    }
-
-    private void deleteKey(int key) {
-        Node delete = map.get(key);
-        cache.remove(delete);
-        map.remove(key);
-    }
-
-    private void removeLeastRecently() {
-        Node target = cache.removeFirst();
-        int key = target.key;
-        map.remove(key);
-    }
-}
-
-class Node {
-    public int key, val;
-    public Node next, prev;
-
-    public Node(int k, int v) {
-        this.key = k;
-        this.val = v;
+        Node cur = new Node(key, value);
+        cache.addFirst(cur);
+        map.put(key, cur);
     }
 }
 
 class DoubleLinkedList {
-    private Node head, tail;
+    private Node head;
+    private Node tail;
     private int size;
 
     public DoubleLinkedList() {
@@ -96,12 +70,11 @@ class DoubleLinkedList {
         this.size = 0;
     }
 
-    // 每次删减或增加都注意tail/head和x
-    public void addLast(Node x) {
-        x.prev = tail.prev;
-        x.next = tail;
-        tail.prev.next = x;
-        tail.prev = x;
+    public void addFirst(Node x) {
+        x.prev = head;
+        x.next = head.next;
+        head.next.prev = x;
+        head.next = x;
         ++size;
     }
 
@@ -111,19 +84,31 @@ class DoubleLinkedList {
         --size;
     }
 
-    public Node removeFirst() {
-        // nothing inside list
-        if (head.next == tail) {
+    public Node removeLast() {
+        if (size == 0) {
             return null;
         }
 
-        Node target = head.next;
+        Node target = tail.prev;
         remove(target);
         return target;
     }
 
     public int getSize() {
         return this.size;
+    }
+}
+
+
+class Node {
+    public int key;
+    public int val;
+    public Node prev;
+    public Node next;
+
+    public Node(int key, int val) {
+        this.key = key;
+        this.val = val;
     }
 }
 
