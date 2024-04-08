@@ -3,6 +3,7 @@ package Leetcode.Over1600.over2000;
 import java.util.*;
 
 public class minOperationsMakeContinuous {
+  // leetcode 2009
   // First remove duplicate elements and sort the array because sequence doesn't make sense
   // Then try to find the most number we can hold
   // which means we can find the least number we can change(n - hold)
