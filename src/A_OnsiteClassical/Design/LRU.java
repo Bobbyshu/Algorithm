@@ -1,4 +1,4 @@
-package A_OnsiteClassical;
+package A_OnsiteClassical.Design;
 
 import java.util.HashMap;
 import java.util.Map;
