@@ -5,30 +5,31 @@ import java.util.*;
 public class t3 {
   public long[] mostFrequentIDs(int[] nums, int[] freq) {
     // map shows freq of nums[i]
-    Map<Integer, Long> cnt = new HashMap<>();
+    Map<Integer, Long> map = new HashMap<>();
     // TreeMap shows freq times
-    TreeMap<Long, Integer> m = new TreeMap<>();
+    TreeMap<Long, Integer> cnt = new TreeMap<>();
     int n = nums.length;
     long[] res = new long[n];
 
     for (int i = 0; i < n; i++) {
-      int x = nums[i];
+      int cur = nums[i];
 
       // remove cur number's frequency
-      // --m[cnt[x]] == 0
-      if (cnt.containsKey(x) && m.containsKey(cnt.get(x))) {
-        int adjust = m.merge(cnt.get(x), -1, Integer::sum);
-        if (adjust == 0) {
-          m.remove(cnt.get(x));
+      // --cnt[cnt[x]] == 0
+      if (map.containsKey(cur) && cnt.containsKey(map.get(cur))) {
+        cnt.merge(map.get(cur), -1, Integer::sum);
+        int after = cnt.get(map.get(cur));
+        if (after == 0) {
+          cnt.remove(map.get(cur));
         }
       }
 
       // cnt[x] += freq[i]
-      long c = cnt.merge(x, (long) freq[i], Long::sum);
+      long c = map.merge(cur, (long) freq[i], Long::sum);
 
-      // ++m[cnt[x]]
-      m.merge(c, 1, Integer::sum);
-      res[i] = m.lastKey();
+      // ++cnt[cnt[x]]
+      cnt.merge(c, 1, Integer::sum);
+      res[i] = cnt.lastKey();
     }
 
     return res;
