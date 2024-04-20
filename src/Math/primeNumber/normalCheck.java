@@ -1,4 +1,4 @@
-package Trick.primeNumber;
+package Math.primeNumber;
 
 public class normalCheck {
     public int countPrimes(int n) {

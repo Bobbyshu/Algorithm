@@ -1,4 +1,4 @@
-package Trick.primeNumber;
+package Math.primeNumber;
 
 import java.util.ArrayList;
 import java.util.List;

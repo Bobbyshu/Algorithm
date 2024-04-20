@@ -1,4 +1,4 @@
-package Trick.primeNumber;
+package Math.primeNumber;
 /*
 任意素数x的倍数有：2x, 3x, 4x, ..., x*x, (x+1)*x, ...
 
