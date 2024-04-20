@@ -30,6 +30,8 @@ public class primeNumberEratosthenes {
                 }
             }
         }
+        // 1不是质数
+        isPrime[1] = false;
 
         // 计数
         int cnt = 0;
