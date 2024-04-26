@@ -1,4 +1,4 @@
-package DataStructure.Tree.prefixTree;
+package A_OnsiteClassical.prefixTree;
 /*
 字典树模板题
 每个节点的含义定义为：表示以该路径为前缀的单词数量

@@ -1,4 +1,4 @@
-package DataStructure.Tree.prefixTree;
+package A_OnsiteClassical.prefixTree;
 
 public class Trie {
     TrieNode root;
@@ -51,6 +51,15 @@ public class Trie {
             node = node.children[c - 'a'];
         }
         return true;
+    }
+}
+
+class TrieNode {
+    TrieNode[] children;
+    boolean isWord;
+
+    public TrieNode() {
+        children = new TrieNode[26];
     }
 }
 
