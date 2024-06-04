@@ -1,3 +1,6 @@
 docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" my-redis
 
+docker run --name some-redis -d -p 6379:6379 redis redis-server --save 60 1 --loglevel warning
+
+// delete
 docker run -d --privileged=true -p 6379:6379 -v /docker/redis/conf/redis.conf:/etc/redis/redis.conf -v /docker/redis/data:/data --name redis-test redis redis-server /etc/redis/redis.conf --appendonly yes
