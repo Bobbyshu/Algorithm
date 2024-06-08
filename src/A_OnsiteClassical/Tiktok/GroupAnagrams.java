@@ -43,5 +43,30 @@ public class GroupAnagrams {
     return sb.toString();
   }
 
+  public List<List<String>> groupAnagramsBetter(String[] strs) {
+    Map<String, List<String>> codeToGroup = new HashMap<>();
 
+    for (String s : strs) {
+      String code = encode(s);
+      codeToGroup.putIfAbsent(code, new ArrayList<>());
+      codeToGroup.get(code).add(s);
+    }
+
+    List<List<String>> res = new ArrayList<>();
+    for (List<String> group : codeToGroup.values()) {
+      res.add(group);
+    }
+
+    return res;
+  }
+
+  String encode(String s) {
+    char[] count = new char[26];
+
+    for (char c : s.toCharArray()) {
+      count[c - 'a']++;
+    }
+
+    return new String(count);
+  }
 }
