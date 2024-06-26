@@ -1,0 +1,46 @@
+# Query
+temp query bus Student * * select id;
+temp query bus Instructor * * select id;
+temp query bus Course * * select id;
+
+# add policy
+add policy Student type Student;~
+mod policy add Student add state Active;
+add policy Instructor type Instructor;
+mod pol add Instructor add state Active;
+add policy Examination type Examination state Active;
+
+# add business object
+add bus Student JohnDoe - policy Student vault "eService Production";
+add bus Instructor MarySmith - policy Instructor vault "eService Production";
+add bus Examination Fall01 - policy Examination vault "eService Production";
+print rel Instructors;
+
+
+# rel
+connect bus 18183.47609.58542.39233(Instructor MarySmith) to 18183.47609.36231.21897(Course Database Systems) relationship Instructs;
+
+expand bus 18183.47609.58542.39233;(The Relationship clause of the Expand Set command returns all objects connected to the starting object with a specific relationship.)
+
+
+# trick
+mod bus Examination spring05 - name Spring05;（require division -)
+
+people support
+
+ssh rndpriv@vdevpril3136am
+Interop01
+cd /RTV/R426relysu1devpril3136
+./server/scripts/mql
+set context user creator;
+insert program ENODCDocumentBase_mxJPO.java;
+compile prog ENODCDocumentBase;
+execute program ENODCDocumentBase -method "convertFileCategoriesToJSON";
+
+# root
+/home/data/RTV/R426relysu1devpril3136
+/home/data/RTV/R426relysu1devpril3136/apache-tomcat/webapps/3DSpace/WEB-INF/classes/enoDocumentControlStringResource_fr.properties
+copy to this path:
+/home/data/RTV/R426relysu1devpril3136/server/managed/properties/enoDocumentControlStringResource_fr.properties
+/home/data/RTV/R426relysu1devpril3136/enoDocumentControlStringResource_fr.properties
+
