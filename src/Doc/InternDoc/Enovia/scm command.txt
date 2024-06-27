@@ -1,5 +1,0 @@
-# go straight to workspace
-
-\\flood\tools\tck_init
-tck_profile SCM
-adl_ch_ws YSU1EQC2024x
