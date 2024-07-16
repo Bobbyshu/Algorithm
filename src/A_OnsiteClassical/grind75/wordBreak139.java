@@ -22,6 +22,9 @@ public class wordBreak139 {
 
     for (int i = 1; i <= n; i++) {
       for (int j = 0; j < i; j++) {
+        // dp[j] for previous substring(0, j) check
+        // contains for suffix check substring(j, i)
+        // only both two segment valid we can set dp[i] = true
         if (set.contains(s.substring(j, i)) && dp[j]) {
           dp[i] = true;
           break;
