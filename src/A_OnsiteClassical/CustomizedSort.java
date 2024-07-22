@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class CustomizedSort {
   public static List<String> sortCustomize(String s, List<String> p) {
-
     Map<Character, Integer> charOrderMap = new HashMap<>();
     for (int i = 0; i < s.length(); i++) {
       charOrderMap.put(s.charAt(i), i);
