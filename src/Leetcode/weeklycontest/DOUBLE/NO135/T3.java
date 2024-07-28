@@ -17,14 +17,14 @@ public class T3 {
       cnt2[Math.max(q, k - p)]++;
     }
 
-    int ans = n;
+    int res = Integer.MAX_VALUE;
     int sum2 = 0; // 统计有多少对 (p,q) 都要改
     for (int x = 0; x <= k; x++) {
       // 其他 n/2-cnt[x] 对 (p,q) 至少要改一个数，在此基础上，有额外的 sum2 对 (p,q) 还要再改一个数
-      ans = Math.min(ans, n / 2 - cnt[x] + sum2);
+      res = Math.min(res, n / 2 - cnt[x] + sum2);
       // 对于后面的更大的 x，当前的这 cnt2[x] 对 (p,q) 都要改
       sum2 += cnt2[x];
     }
-    return ans;
+    return res;
   }
 }
