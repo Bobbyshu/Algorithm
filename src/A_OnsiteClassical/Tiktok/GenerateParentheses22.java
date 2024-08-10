@@ -54,4 +54,28 @@ public class GenerateParentheses22 {
 
     return left == 0;
   }
+
+  public List<String> generateParenthesisOptimize(int n) {
+    res = new LinkedList<>();
+    backtrace(new StringBuilder(), n, n);
+    return res;
+  }
+
+  void backtrace(StringBuilder sb, int left, int right) {
+    if (left > right) return;
+    if (left < 0 || right < 0) return;
+
+    if (left == 0 && right == 0) {
+      res.add(sb.toString());
+      return;
+    }
+
+    sb.append("(");
+    backtrace(sb, left - 1, right);
+    sb.deleteCharAt(sb.length() - 1);
+
+    sb.append(")");
+    backtrace(sb, left, right - 1);
+    sb.deleteCharAt(sb.length() - 1);
+  }
 }
