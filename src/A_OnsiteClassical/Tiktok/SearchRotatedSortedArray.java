@@ -11,6 +11,8 @@ public class SearchRotatedSortedArray {
       }
 
       // in rotated left side
+      // 这里要取 >= 因为mid = (l + r) / 2
+      // 是地板除，mid一定要在左边处理
       if (nums[mid] >= nums[l]) {
         // target located between nums[l] and nums[mid]
         if (target >= nums[l] && target < nums[mid]) {
