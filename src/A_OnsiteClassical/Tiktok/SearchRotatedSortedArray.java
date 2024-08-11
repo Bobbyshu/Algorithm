@@ -10,7 +10,7 @@ public class SearchRotatedSortedArray {
         return mid;
       }
 
-      // in left side
+      // in rotated left side
       if (nums[mid] >= nums[l]) {
         // target located between nums[l] and nums[mid]
         if (target >= nums[l] && target < nums[mid]) {
@@ -19,7 +19,7 @@ public class SearchRotatedSortedArray {
           l = mid + 1;
         }
       } else { // nums[mid] < nums[l]
-        // located at right side
+        // located at rotated right side
         if (target > nums[mid] && target < nums[l]) {
           l = mid + 1;
         } else {
