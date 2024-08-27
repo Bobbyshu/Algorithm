@@ -28,7 +28,14 @@ public class numberOfIslands {
 
     while (!q.isEmpty()) {
       int[] cur = q.pollFirst();
-
+      // we can't mark cur[0] and cur[1] at here
+      // cuz we need to let every node only traverse once
+      //       1 1 1
+      // image 1 1 1 for the middle 1, it will come in queue more than once
+      //       1 1 1
+      // at the same level traverse, some node may be added into queue
+      // more than once
+      // visited[nextI][nextJ] = true;
       for (int[] dir : dirs) {
         int nextI = cur[0] + dir[0], nextJ = cur[1] + dir[1];
         if (isValid(nextI, nextJ, grid) && !visited[nextI][nextJ] && grid[nextI][nextJ] == '1') {
