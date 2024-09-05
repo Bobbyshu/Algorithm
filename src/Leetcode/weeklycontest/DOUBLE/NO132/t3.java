@@ -7,6 +7,7 @@ public class t3 {
     int n = nums.length;
     // dp[i][j] states that the longest length of subarray
     // that ends with nums[i] and no more than j index satisfied
+    // here k don't need to divided by 2 cuz we have taken it account during computation
     int[][] dp = new int[n][k + 1];
 
     for (int[] d : dp) {
