@@ -5,6 +5,7 @@ public class wordSearch79 {
   private boolean[][] visited;
   private char[][] board;
 
+  // Time Complexity: O(M * N * 3^L) where l == length of word
   public boolean exist(char[][] board, String word) {
     int m = board.length, n = board[0].length;
     this.visited = new boolean[m][n];
