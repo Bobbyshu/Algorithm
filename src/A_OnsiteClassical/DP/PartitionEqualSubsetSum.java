@@ -7,7 +7,7 @@ public class PartitionEqualSubsetSum {
     int[] arr = {23,13,11,7,6,5,5};
     canPartition(arr);
   }
-  public boolean canPartition(int[] nums) {
+  public static boolean canPartition(int[] nums) {
     Arrays.sort(nums);
     int sum = 0;
 
