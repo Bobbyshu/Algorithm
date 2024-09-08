@@ -4,7 +4,7 @@ public class StringToInteger8 {
   public int myAtoi(String s) {
     s = s.trim();
     // System.out.println(s);
-    if (s.length() == 0) {
+    if (s.isEmpty()) {
       return 0;
     }
 
