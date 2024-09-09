@@ -1,7 +1,7 @@
 package A_OnsiteClassical.grind75;
 
 public class StringToInteger8 {
-  public int myAtoi(String s) {
+  public int myAtoInteger(String s) {
     s = s.trim();
     // System.out.println(s);
     if (s.isEmpty()) {
