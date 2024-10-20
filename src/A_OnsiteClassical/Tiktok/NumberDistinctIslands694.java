@@ -42,6 +42,6 @@ public class NumberDistinctIslands694 {
     dfs(i - 1, j, sb, "u");
     dfs(i, j + 1, sb, "r");
     dfs(i, j - 1, sb, "l");
-    sb.append("b")
+    sb.append("b");
   }
 }
