@@ -1,7 +1,7 @@
 package A_OnsiteClassical.Tiktok;
 
 public class SubarraySumsDivisibleK974 {
-  public int subarraysDivByK(int[] nums, int k) {
+  public int subarrayDivByK(int[] nums, int k) {
     int n = nums.length;
     int[] prefix = new int[n + 1];
     for (int i = 1; i <= n; ++i) {
