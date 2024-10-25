@@ -31,7 +31,7 @@ public class restoreIPAddress {
       if (check(sb, startIdx, i)) {
         sb.insert(i + 1, ".");
         dfs(sb, i + 2, seg + 1);
-        sb.deleteCharAt(i + 1);
+        sb.deleteCharAt(i + 1)
       } else {
         break;
       }
