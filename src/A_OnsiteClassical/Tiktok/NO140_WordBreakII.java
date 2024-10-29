@@ -3,6 +3,8 @@ package A_OnsiteClassical.Tiktok;
 import java.util.*;
 
 public class NO140_WordBreakII {
+  // T: O(n * 2^n)
+  // S: O(n * 2^n)
   public List<String> wordBreak(String s, List<String> wordDict) {
     Set<String> set = new HashSet(wordDict);
     int n = s.length();
@@ -33,14 +35,18 @@ public class NO140_WordBreakII {
 
   private void dfs(String s, int n, Set<String> set, boolean[] dp, Deque<String> path, List<String> res) {
     if (n == 0) {
-      res.add(String.join(" ", path));
+      StringBuilder sb = new StringBuilder();
+      for (String str : path) {
+        sb.append(str).append(" ");
+      }
+      sb.setLength(sb.length() - 1);
+      res.add(sb.toString());
       return;
     }
 
-    // n * 2^n
     for (int i = n - 1; i >= 0; --i) {
       String suffix = s.substring(i, n);
-//      System.out.println(suffix);
+      // System.out.println(suffix);
       if (set.contains(suffix) && dp[i]) {
         path.addFirst(suffix);
         dfs(s, i, set, dp, path, res);
