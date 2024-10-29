@@ -1,12 +1,12 @@
 package A_OnsiteClassical.Tiktok;
 
-class designTicTacToe348 {
+class NO348_DesignTicTacToe {
   private int[] rows;
   private int[] cols;
   private int diagonal;
   private int antiDiagonal;
 
-  public designTicTacToe348(int n) {
+  public NO348_DesignTicTacToe(int n) {
     rows = new int[n];
     cols = new int[n];
   }

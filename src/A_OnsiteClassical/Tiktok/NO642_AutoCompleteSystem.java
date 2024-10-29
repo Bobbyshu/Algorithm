@@ -2,7 +2,7 @@ package A_OnsiteClassical.Tiktok;
 
 import java.util.*;
 
-class AutoCompleteSystem642 {
+class NO642_AutoCompleteSystem {
     class TrieNode {
       Map<Character, TrieNode> children;
       Map<String, Integer> counts;
@@ -26,7 +26,7 @@ class AutoCompleteSystem642 {
     String prefix;
 
 
-    public AutoCompleteSystem642(String[] sentences, int[] times) {
+    public NO642_AutoCompleteSystem(String[] sentences, int[] times) {
       root = new TrieNode();
       prefix = "";
 

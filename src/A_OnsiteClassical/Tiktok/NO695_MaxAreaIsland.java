@@ -1,13 +1,12 @@
 package A_OnsiteClassical.Tiktok;
 
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 
-public class MaxAreaIsland695 {
+public class NO695_MaxAreaIsland {
   public static void main(String[] args) {
     int[][] arr = {{1,1,0,0,0},{1,1,0,0,0},{0,0,0,1,1},{0,0,0,1,1}};
-    MaxAreaIsland695 m = new MaxAreaIsland695();
+    NO695_MaxAreaIsland m = new NO695_MaxAreaIsland();
     m.maxAreaOfIsland(arr);
   }
   int[][] grid;

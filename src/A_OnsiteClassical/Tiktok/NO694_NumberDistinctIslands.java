@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.HashSet;
 import java.util.Set;
 
-public class NumberDistinctIslands694 {
+public class NO694_NumberDistinctIslands {
   int[][] grid;
   int m, n;
   boolean[][] visited;

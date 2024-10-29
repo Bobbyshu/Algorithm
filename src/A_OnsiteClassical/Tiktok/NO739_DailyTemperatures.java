@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class DailyTemperatures739 {
+public class NO739_DailyTemperatures {
 
   public int[] dailyTemperatures(int[] nums) {
     int n = nums.length;

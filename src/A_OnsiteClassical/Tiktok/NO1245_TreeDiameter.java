@@ -2,7 +2,7 @@ package A_OnsiteClassical.Tiktok;
 
 import java.util.*;
 
-public class TreeDiameter {
+public class NO1245_TreeDiameter {
   public int treeDiameter(int[][] edges) {
     // one of the approaches
     // find "centroids" it will be one or 2 elements

@@ -2,7 +2,7 @@ package A_OnsiteClassical.Tiktok;
 
 import java.util.*;
 
-public class WordBreakII140 {
+public class NO140_WordBreakII {
   public List<String> wordBreak(String s, List<String> wordDict) {
     Set<String> set = new HashSet(wordDict);
     int n = s.length();
@@ -10,6 +10,7 @@ public class WordBreakII140 {
     boolean[] dp = new boolean[n + 1];
     dp[0] = true;
 
+    // 先用背包问题来找是否存在解
     for (int r = 1; r <= n; ++r) {
       for (int l = r - 1; l >= 0; --l) {
         if (set.contains(s.substring(l, r)) && dp[l]) {
@@ -19,6 +20,7 @@ public class WordBreakII140 {
       }
     }
 
+    // 存在的情况下才去走回溯
     List<String> res = new ArrayList<>();
     if (dp[n]) {
       Deque<String> path = new ArrayDeque<>();

@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class DecodeString394 {
+public class NO394_DecodeString {
   public String decodeString(String s) {
     Deque<Integer> cnt = new ArrayDeque<>();
     Deque<String> dict = new ArrayDeque<>();

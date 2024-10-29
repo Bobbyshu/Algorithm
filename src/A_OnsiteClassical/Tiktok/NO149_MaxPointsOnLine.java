@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MaxPointsOnLine149 {
+public class NO149_MaxPointsOnLine {
   // 究极暴力n^3
   public int maxPoints(int[][] points) {
     int n = points.length, res = 1;

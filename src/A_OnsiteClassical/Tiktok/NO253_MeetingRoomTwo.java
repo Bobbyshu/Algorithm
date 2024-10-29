@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class meetingRoomTwo253 {
+public class NO253_MeetingRoomTwo {
   // 先对所有的区间按照开始时间进行排序，使用小根堆保存每个会议的结束时间，
   // 要申请会议室的时候，先看是不是可以释放会议室，将已经占用的会议室释放
   public int minMeetingRooms(int[][] intervals) {

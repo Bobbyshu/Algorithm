@@ -1,6 +1,6 @@
 package A_OnsiteClassical.Tiktok;
 
-public class MinimumAddMakeParenthesesValid921 {
+public class NO921_MinimumAddMakeParenthesesValid {
   // 要考虑)在(前面的情况
   public int minAddToMakeValid(String s) {
     int left = 0, right = 0;

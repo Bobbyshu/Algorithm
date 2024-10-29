@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SplitMaxNumberUniqueSubstring1593 {
+public class NO1593_SplitMaxNumberUniqueSubstring {
   int res = 0;
 
   public int maxUniqueSplit(String s) {

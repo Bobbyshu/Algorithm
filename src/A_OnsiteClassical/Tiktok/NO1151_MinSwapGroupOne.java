@@ -1,6 +1,6 @@
 package A_OnsiteClassical.Tiktok;
 
-public class MinSwapGroupOne1151 {
+public class NO1151_MinSwapGroupOne {
   public int minSwaps(int[] data) {
     int one = 0;
     for (int d : data) {

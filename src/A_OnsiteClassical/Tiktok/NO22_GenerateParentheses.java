@@ -6,7 +6,7 @@ import java.util.List;
 
 // Space Complexity: O(N) we only use 1 container to accommodate the string
 // Time Complexity: O(2
-public class GenerateParentheses22 {
+public class NO22_GenerateParentheses {
   StringBuilder sb;
   List<String> res;
   int n;

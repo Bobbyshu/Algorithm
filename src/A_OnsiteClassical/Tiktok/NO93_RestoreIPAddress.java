@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.ArrayList;
 import java.util.List;
 
-public class restoreIPAddress {
+public class NO93_RestoreIPAddress {
   List<String> res;
   StringBuilder path;
 

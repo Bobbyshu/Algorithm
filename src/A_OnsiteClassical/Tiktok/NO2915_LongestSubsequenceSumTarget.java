@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.Arrays;
 import java.util.List;
 
-public class LongestSubsequenceSumTarget {
+public class NO2915_LongestSubsequenceSumTarget {
   public int lengthOfLongestSubsequence(List<Integer> nums, int target) {
 
     int[] dp = new int[target + 1];

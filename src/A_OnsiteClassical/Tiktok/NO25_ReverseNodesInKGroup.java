@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class ReverseNodesInKGroup25 {
+public class NO25_ReverseNodesInKGroup {
   public ListNode reverseKGroupStack(ListNode head, int k) {
     Deque<ListNode> stk = new ArrayDeque<>();
     ListNode dummy = new ListNode(0);

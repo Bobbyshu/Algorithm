@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class NO239_SlidingWindowMaximum {
+  // 用一个单调队列的顶部来记录当前的最大值
   public int[] maxSlidingWindow(int[] nums, int k) {
     int n = nums.length;
     int[] res = new int[n - k + 1];

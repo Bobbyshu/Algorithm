@@ -1,6 +1,6 @@
 package A_OnsiteClassical.Tiktok;
 
-public class MinimumSwapsMakeStringBalanced {
+public class NO1963_MinimumSwapsMakeStringBalanced {
   // to make min swap
   // we need to always swap the ']' to the rightMost index
   // cuz rightMost can make more legal []

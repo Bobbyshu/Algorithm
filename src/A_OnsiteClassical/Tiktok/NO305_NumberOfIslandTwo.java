@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class numberOfIslandTwo305 {
+public class NO305_NumberOfIslandTwo {
   // To transfer 2d array to union find
   // use int id = n * x + y
   public List<Integer> numIslands2(int m, int n, int[][] positions) {

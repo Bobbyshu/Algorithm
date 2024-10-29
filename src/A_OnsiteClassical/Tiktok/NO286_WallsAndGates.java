@@ -3,7 +3,7 @@ package A_OnsiteClassical.Tiktok;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class WallsAndGates286 {
+public class NO286_WallsAndGates {
   public void wallsAndGates(int[][] rooms) {
     if (rooms == null || rooms.length == 0 || rooms[0].length == 0) {
       return;

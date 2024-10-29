@@ -2,7 +2,7 @@ package A_OnsiteClassical.Tiktok;
 
 import java.util.*;
 
-public class SmallestCommonRegion1257 {
+public class NO1257_SmallestCommonRegion {
   // 用了最低祖先的算法，就是map记录每个节点的一路上去的祖先，
   // 然后set先采集其中一个节点这个一路上去的路，
   // 另一个也依法炮制直到他们两的路有所交集即为找到最低公共祖先了

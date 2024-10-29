@@ -2,7 +2,7 @@ package A_OnsiteClassical.Tiktok;
 
 import java.util.Arrays;
 
-public class LongestIncreasingPath329 {
+public class NO329_LongestIncreasingPath {
   public int longestIncreasingPath(int[][] matrix) {
     int m = matrix.length, n = matrix[0].length;
     int[][] memo = new int[m][n];
