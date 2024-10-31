@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class NO4_GroupAnagrams {
+public class NO49_GroupAnagrams {
   // Time complexity: O(n) * O(m) * O(26) where n = strs.length
   // Space complexity: in worse case, every string inside of strs will have
   // separate group. So, we should create O(n) keys and store O(26m) values,
