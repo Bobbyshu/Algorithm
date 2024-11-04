@@ -3,51 +3,37 @@ package A_OnsiteClassical.Tiktok;
 import java.util.*;
 
 public class NO1245_TreeDiameter {
+  // Traverse all the nodes of the tree.
+  // The diameter of the tree is maximum of the longest path through each node.
+  // Longest path through a node is sum of top 2 depths of children's tree.
+  int diameter = 0;
   public int treeDiameter(int[][] edges) {
-    // one of the approaches
-    // find "centroids" it will be one or 2 elements
-    // use topological sort to peel leaf elements
-
-    // corner case
-    if (edges == null || edges.length == 0) {
-      return 0;
+    int n = edges.length + 1;
+    List<Integer>[] graph = new List[n];
+    for (int i = 0; i < n; ++i) graph[i] = new LinkedList<>();
+    for (int[] e : edges) {
+      graph[e[0]].add(e[1]);
+      graph[e[1]].add(e[0]);
     }
-
-    Map<Integer, Set<Integer>> adjSet = new HashMap<>();
-
-    // create adj set
-    for (int[] edge : edges) {
-      adjSet.computeIfAbsent(edge[0], k -> new HashSet<>()).add(edge[1]);
-      adjSet.computeIfAbsent(edge[1], k -> new HashSet<>()).add(edge[0]);
-    }
-
-    // populate queue with leaf elements for topological sort
-    Queue<Integer> queue = new ArrayDeque<>();
-    for (Map.Entry<Integer, Set<Integer>> entry : adjSet.entrySet()) {
-      if (entry.getValue().size() == 1) {
-        queue.offer(entry.getKey());
+    diameter = 0;
+    depth(0, -1, graph);
+    return diameter;
+  }
+  // Depth of the tree is the number of nodes along the longest path from the root node down to the farthest leaf node.
+  int depth(int root, int parent, List<Integer>[] graph) {
+    int maxDepth1st = 0, maxDepth2nd = 0;
+    for (int child : graph[root]) {
+      if (child == parent) continue; // Only one way from root node to child node, don't allow child node go to root node again!
+      int childDepth = depth(child, root, graph);
+      if (childDepth > maxDepth1st) {
+        maxDepth2nd = maxDepth1st;
+        maxDepth1st = childDepth;
+      } else if (childDepth > maxDepth2nd) {
+        maxDepth2nd = childDepth;
       }
     }
-
-    int diameter = 0;
-
-    // start to peel
-    while (queue.size() > 1) { // we have to peel until we get a 1 or 0 elements left
-      int size = queue.size();
-      for (int i = 0; i < size; ++i) {
-        Integer node = queue.poll();
-        for (int neighbor : adjSet.get(node)) {
-          adjSet.get(neighbor).remove(node);
-          if (adjSet.get(neighbor).size() == 1) {
-            queue.offer(neighbor);
-          }
-        }
-      }
-
-      diameter += 2;
-    }
-
-    // in queue can stay only 1 or 0 elements
-    return queue.size() == 1 ? diameter : diameter - 1;
+    int longestPathThroughRoot = maxDepth1st + maxDepth2nd + 1; // the number of nodes in the longest path
+    diameter = Math.max(diameter, longestPathThroughRoot - 1); // diameter = number of edges = number of nodes - 1
+    return maxDepth1st + 1;
   }
 }
