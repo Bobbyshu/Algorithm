@@ -36,4 +36,26 @@ public class NO825_FriendsOfAppropriateAges {
 
     return true;
   }
+
+  public int numFriendRequests2(int[] ages) {
+    int[] cnt = new int[121];
+    for (int age : ages) {
+      cnt[age]++;
+    }
+
+    int res = 0;
+    int r = 0;
+    int len = 0;
+    for (int l = 0; l < cnt.length; l++) {
+      len += cnt[l];
+      if (r * 2 <= l + 14) { // 不能发送好友请求
+        len -= cnt[r];
+        r++;
+      }
+      if (len > 0) { // 存在可以发送好友请求的用户
+        res += cnt[l] * len - cnt[l];
+      }
+    }
+    return res;
+  }
 }
