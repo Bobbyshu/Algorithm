@@ -8,6 +8,7 @@ public class MinTimeReachLastRoom3342 {
     int[][] arr = {{0,4},{4,4}};
     minTimeToReach(arr);
   }
+
   public static int minTimeToReach(int[][] moveTime) {
     int n = moveTime.length, m = moveTime[0].length;
     int[][] times = new int[n][m];
