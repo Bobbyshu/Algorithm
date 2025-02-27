@@ -76,3 +76,8 @@ git merge refactor
 # Then push your changes into the main branch, such that I should see src/rectangle.d
 # with the changes that have been made in the 'refactor' branch.
 git push
+
+# create new branch in github page and sync to local
+git fetch
+git checkout -b <new-branch-name> origin/<new-branch-name>
+git branch
